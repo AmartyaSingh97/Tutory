@@ -73,6 +73,8 @@ fun OnboardingPagerScreen(onFinished: () -> Unit) {
                 OnboardingPageContent(page = onboardingPages[page])
             }
 
+            Spacer(modifier = Modifier.height(100.dp))
+
             HorizontalPagerIndicator(
                 pagerState = pagerState,
                 activeColor = Color.Black,
@@ -109,7 +111,7 @@ fun OnboardingPagerScreen(onFinished: () -> Unit) {
                     fontSize = 16.sp
                 )
             }
-            Spacer(modifier = Modifier.height(12.dp))
+            Spacer(modifier = Modifier.height(18.dp))
         }
 
         if (pagerState.currentPage != onboardingPages.lastIndex) {
@@ -124,7 +126,7 @@ fun OnboardingPagerScreen(onFinished: () -> Unit) {
                     .align(Alignment.TopEnd)
                     .padding(16.dp)
             ) {
-                Text(text = "Skip >", color = Color.Gray)
+                Text(text = "Skip >", color = Color.Black, fontSize = 18.sp)
             }
         }
     }
